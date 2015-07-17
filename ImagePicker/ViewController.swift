@@ -217,7 +217,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Share image action
     func ShareMeme(){
         
-        performSegueWithIdentifier("share", sender: self)
+//        performSegueWithIdentifier("share", sender: self)
+        
+        let item = generateMemedImage()
+        let objectsToShare = [item.memedImage]
+        let avc = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        presentViewController(avc, animated: true, completion: nil)
 
     }
     

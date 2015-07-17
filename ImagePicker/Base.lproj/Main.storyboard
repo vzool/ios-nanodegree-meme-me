@@ -73,20 +73,20 @@
                                 <exclude reference="Jl8-GY-2S2"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="PKJ-R4-AGT"/>
-                                <exclude reference="gYV-1I-r2m"/>
-                                <exclude reference="v65-34-IDZ"/>
+                                <exclude reference="0By-sm-Bpf"/>
+                                <exclude reference="FPc-q0-quA"/>
                                 <exclude reference="8MK-Zg-xh4"/>
                                 <exclude reference="Qk2-1G-KgK"/>
                                 <exclude reference="Wde-11-3qq"/>
-                                <exclude reference="0By-sm-Bpf"/>
-                                <exclude reference="FPc-q0-quA"/>
+                                <exclude reference="EcC-o5-rgB"/>
+                                <exclude reference="GeW-gH-YcW"/>
                                 <exclude reference="3is-L6-ULC"/>
                                 <exclude reference="G7x-jV-sbc"/>
                                 <exclude reference="rPj-eD-mDt"/>
                                 <exclude reference="sYr-cO-DgG"/>
-                                <exclude reference="EcC-o5-rgB"/>
-                                <exclude reference="GeW-gH-YcW"/>
+                                <exclude reference="PKJ-R4-AGT"/>
+                                <exclude reference="gYV-1I-r2m"/>
+                                <exclude reference="v65-34-IDZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -97,20 +97,20 @@
                                 <include reference="Jl8-GY-2S2"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="PKJ-R4-AGT"/>
-                                <include reference="gYV-1I-r2m"/>
-                                <include reference="v65-34-IDZ"/>
+                                <include reference="0By-sm-Bpf"/>
+                                <include reference="FPc-q0-quA"/>
                                 <include reference="8MK-Zg-xh4"/>
                                 <include reference="Qk2-1G-KgK"/>
                                 <include reference="Wde-11-3qq"/>
-                                <include reference="0By-sm-Bpf"/>
-                                <include reference="FPc-q0-quA"/>
+                                <include reference="EcC-o5-rgB"/>
+                                <include reference="GeW-gH-YcW"/>
                                 <include reference="3is-L6-ULC"/>
                                 <include reference="G7x-jV-sbc"/>
                                 <include reference="rPj-eD-mDt"/>
                                 <include reference="sYr-cO-DgG"/>
-                                <include reference="EcC-o5-rgB"/>
-                                <include reference="GeW-gH-YcW"/>
+                                <include reference="PKJ-R4-AGT"/>
+                                <include reference="gYV-1I-r2m"/>
+                                <include reference="v65-34-IDZ"/>
                             </mask>
                         </variation>
                     </view>
