@@ -17,6 +17,8 @@ class SentItemsViewController: UICollectionViewController, UICollectionViewDataS
         
         super.viewWillAppear(animated)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "openImageEdior")
+        
         // read all current memed sent
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
@@ -28,8 +30,12 @@ class SentItemsViewController: UICollectionViewController, UICollectionViewDataS
         // set white to background color
         collectionView!.backgroundColor = UIColor.whiteColor()
         
-        // set navigation title
-        navigationItem.title = "Meme Me - CollectionView"
+        // set title
+        navigationItem.title = "Sent Memes"
+    }
+    
+    func openImageEdior(){
+        performSegueWithIdentifier("SHOW_IMAGE_EDITOR_FROM_COLLECTION_VIEW", sender: self)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

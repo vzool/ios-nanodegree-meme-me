@@ -20,6 +20,7 @@
 		8F31C4131B590D3C004B514E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F31C4121B590D3C004B514E /* TableViewController.swift */; };
 		8F31C4151B5917F6004B514E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F31C4141B5917F6004B514E /* ShareViewController.swift */; };
 		8F31C4171B5920B1004B514E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F31C4161B5920B1004B514E /* Social.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8F31C4191B593CF5004B514E /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F31C4181B593CF5004B514E /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8F31C4121B590D3C004B514E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8F31C4141B5917F6004B514E /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8F31C4161B5920B1004B514E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8F31C4181B593CF5004B514E /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				8F10A8571B567E6500D4ED1B /* Main.storyboard */,
+				8F31C4181B593CF5004B514E /* TabViewController.swift */,
 				8F31C4141B5917F6004B514E /* ShareViewController.swift */,
 				8F0CFC741B4E67640044B4E0 /* AppDelegate.swift */,
 				8F0CFC761B4E67640044B4E0 /* ViewController.swift */,
@@ -241,6 +244,7 @@
 				8F10A8521B56657500D4ED1B /* Meme.swift in Sources */,
 				8F0CFC771B4E67640044B4E0 /* ViewController.swift in Sources */,
 				8F0CFC751B4E67640044B4E0 /* AppDelegate.swift in Sources */,
+				8F31C4191B593CF5004B514E /* TabViewController.swift in Sources */,
 				8F31C4151B5917F6004B514E /* ShareViewController.swift in Sources */,
 				8F10A85B1B5687F700D4ED1B /* SentItemsViewController.swift in Sources */,
 			);

@@ -17,6 +17,8 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         
         super.viewWillAppear(animated)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "openImageEdior")
+        
         // read all current memed sent
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
@@ -25,8 +27,12 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         // reload when switch back to sent items tab
         tableView!.reloadData()
         
-        // set navigation title
-        navigationItem.title = "Meme Me - TableView"
+        // set title
+        navigationItem.title = "Sent Memes"
+    }
+    
+    func openImageEdior(){
+        performSegueWithIdentifier("SHOW_IMAGE_EDITOR_FROM_TABLE_VIEW", sender: self)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

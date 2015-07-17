@@ -13,20 +13,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
+    @IBOutlet weak var albumButton: UIBarButtonItem!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var tabBar: UIToolbar!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: UIBarButtonItemStyle.Plain, target: self, action: "ShareMeme")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "ShareMeme")
         
-        navigationItem.leftBarButtonItems = [
-            UIBarButtonItem(title: "Album", style: UIBarButtonItemStyle.Plain, target: self, action: "openAlbum"),
-            UIBarButtonItem(title: "Camera", style: UIBarButtonItemStyle.Plain, target: self, action: "openCamera")
-        ]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "CancelHandler")
         
         // disable share button
-        navigationItem.rightBarButtonItem?.enabled = false
+        navigationItem.leftBarButtonItem?.enabled = false
         
         // Load TextField Styles
         loadStyles()
@@ -62,12 +62,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+
         // enable album button when it's exists
-        (navigationItem.leftBarButtonItems!.first as! UIBarButtonItem).enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
+        albumButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
         
         // enable camera button when it's exists
-        (navigationItem.leftBarButtonItems!.last as! UIBarButtonItem).enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
         
         // call to subscribe to keyboard notification
         subscribeToKeyboardNotifications()
@@ -137,7 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.image = image
         
         // enable share button
-        navigationItem.rightBarButtonItem?.enabled = true
+        navigationItem.leftBarButtonItem?.enabled = true
         
         // Dissmiss ImagePickerController
         dismissViewControllerAnimated(true, completion: nil)
@@ -198,6 +198,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         // Hide toolBar
         tabBarController?.tabBar.hidden = true
+        tabBar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(view.frame.size)
@@ -208,6 +209,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         // Show toolBar
        tabBarController?.tabBar.hidden = false
+        tabBar.hidden = false
         
         return Meme(topText: topText.text, bottomText: bottomText.text, originalImage: imageView.image!, memedImage: memedImage)
     }
@@ -225,5 +227,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             vc.memedImageData = generateMemedImage()
         }
     }
+    
+    @IBAction func cameraHandler(sender: AnyObject) {
+        openCamera()
+    }
+    
+    @IBAction func AlbumHandler(sender: AnyObject) {
+        openAlbum()
+    }
+    
+    func CancelHandler(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
