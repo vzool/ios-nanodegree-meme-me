@@ -220,6 +220,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        performSegueWithIdentifier("share", sender: self)
         
         let item = generateMemedImage()
+        
+        rememberShare(item)
+        
         let objectsToShare = [item.memedImage]
         let avc = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         presentViewController(avc, animated: true, completion: nil)
@@ -243,6 +246,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func CancelHandler(){
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func rememberShare(memedImageData: Meme){
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(memedImageData)
     }
     
 }
